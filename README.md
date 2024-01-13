@@ -4,4 +4,4 @@
 ## 숫자세기 앱
 [코드 바로가기](https://github.com/ois0886/Android_Side_Projects/tree/main/CounterNumberApp)<br>
 <br>
-[블로그 바로가기]()
+[블로그 바로가기](https://superohinsung.tistory.com/299)
