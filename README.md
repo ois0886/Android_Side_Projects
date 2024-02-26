@@ -9,4 +9,4 @@
 ## BMI 계산기 앱
 [코드 바로가기]()<br>
 <br>
-[블로그 바로가기]()
+[블로그 바로가기](https://superohinsung.tistory.com/310)
