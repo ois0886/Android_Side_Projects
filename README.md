@@ -3,15 +3,9 @@
 
 ## 숫자세기 앱
 [코드 바로가기](https://github.com/ois0886/Android_Side_Projects/tree/main/CounterNumberApp)<br>
-<br>
-[블로그 바로가기](https://superohinsung.tistory.com/299)
 
 ## BMI 계산기 앱
 [코드 바로가기](https://github.com/ois0886/Android_Side_Projects/tree/main/BMI_Calculating)<br>
-<br>
-[블로그 바로가기](https://superohinsung.tistory.com/310)
 
 ## 로또 추첨 앱
 [코드 바로가기](https://github.com/ois0886/Android_Side_Projects/tree/main/Lotto_Machine)<br>
-<br>
-[블로그 바로가기](https://superohinsung.tistory.com/311)
