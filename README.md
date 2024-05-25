@@ -1,5 +1,5 @@
 # Android_Side_Projects
-강의를 들으면서 만들어본 간단한 프로젝트 모음입니다.
+간단히 만들어본 프로젝트 모음입니다.
 
 ## 숫자세기 앱
 [코드 바로가기](https://github.com/ois0886/Android_Side_Projects/tree/main/CounterNumberApp)<br>
