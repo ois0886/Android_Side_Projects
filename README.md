@@ -11,7 +11,7 @@
 [코드 바로가기](https://github.com/ois0886/Android_Side_Projects/tree/main/Lotto_Machine)<br>
 
 ## 단위 변환 앱
-[코드 바로가기](https://github.com/ois0886/Android_Side_Projects/tree/main/Lotto_Machine)<br>
+[코드 바로가기](https://github.com/ois0886/Android_Side_Projects/tree/main/UnitConversion)<br>
 
 ## 응급 정보 앱
-[코드 바로가기](https://github.com/ois0886/Android_Side_Projects/tree/main/Lotto_Machine)<br>
+[코드 바로가기](https://github.com/ois0886/Android_Side_Projects/tree/main/Emergency_Medical_Information)<br>
