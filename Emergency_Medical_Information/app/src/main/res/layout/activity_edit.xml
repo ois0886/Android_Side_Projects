@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".EditActivity">
 
     <TextView
         android:id="@+id/nameTextView"
@@ -16,15 +16,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/nameValueTextView"
+    <EditText
+        android:id="@+id/nameEditText"
         style="@style/Value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:text="채상아채상아채상아채상아채상아채상아채상아"
+        android:inputType="text"
         app:layout_constraintBaseline_toBaselineOf="@id/nameTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideLine" />
@@ -43,10 +41,20 @@
         style="@style/Value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:paddingEnd="8dp"
         android:text="0000-00-00"
         app:layout_constraintBaseline_toBaselineOf="@id/birthdateTextView"
-        app:layout_constraintEnd_toEndOf="@id/nameValueTextView"
+        app:layout_constraintEnd_toStartOf="@+id/birthdateImageView"
         app:layout_constraintStart_toStartOf="@id/guideLine" />
+
+    <ImageView
+        android:id="@+id/birthdateImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_edit_calendar_24"
+        app:layout_constraintBottom_toBottomOf="@id/birthdateTextView"
+        app:layout_constraintEnd_toEndOf="@id/nameEditText"
+        app:layout_constraintTop_toTopOf="@id/birthdateTextView" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideLine"
@@ -82,71 +90,87 @@
         app:layout_constraintStart_toStartOf="@id/nameTextView"
         app:layout_constraintTop_toBottomOf="@id/emergencyContactTextView" />
 
-    <TextView
-        android:id="@+id/bloodTypeValueTextView"
-        style="@style/Value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="A"
-        app:layout_constraintBaseline_toBaselineOf="@id/bloodTypeTextView"
-        app:layout_constraintEnd_toEndOf="@id/nameValueTextView"
-        app:layout_constraintStart_toStartOf="@id/guideLine" />
 
-    <TextView
-        android:id="@+id/emergencyContactValueTextView"
-        style="@style/Value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="0000-0000-0000"
-        app:layout_constraintBaseline_toBaselineOf="@id/emergencyContactTextView"
-        app:layout_constraintEnd_toStartOf="@id/imageView"
-        app:layout_constraintStart_toStartOf="@id/guideLine" />
-
-    <ImageView
-        android:id="@+id/imageView"
+    <RadioGroup
+        android:id="@+id/bloodTypeRadioGroup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_phone_24"
-        app:layout_constraintBottom_toBottomOf="@id/emergencyContactValueTextView"
-        app:layout_constraintEnd_toEndOf="@id/nameValueTextView"
-        app:layout_constraintTop_toTopOf="@id/emergencyContactValueTextView" />
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/bloodTypeTextView"
+        app:layout_constraintStart_toStartOf="@id/guideLine"
+        app:layout_constraintTop_toTopOf="@id/bloodTypeTextView">
 
-    <TextView
-        android:id="@+id/warningValueTextView"
+        <RadioButton
+            android:id="@+id/bloodTypePlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rh+" />
+
+        <RadioButton
+            android:id="@+id/bloodTypeMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rh-" />
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/bloodTypeSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/bloodTypeTextView"
+        app:layout_constraintEnd_toEndOf="@id/nameEditText"
+        app:layout_constraintStart_toEndOf="@+id/bloodTypeRadioGroup"
+        app:layout_constraintTop_toTopOf="@id/bloodTypeTextView" />
+
+    <CheckBox
+        android:id="@+id/warningCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:text="주의사항 노출"
+        app:layout_constraintBottom_toBottomOf="@+id/warningTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameEditText"
+        app:layout_constraintStart_toStartOf="@+id/guideLine"
+        app:layout_constraintTop_toTopOf="@+id/warningTextView" />
+
+    <EditText
+        android:id="@+id/emergencyContactEditText"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="0000-0000-0000"
+        android:inputType="phone"
+        app:layout_constraintBaseline_toBaselineOf="@id/emergencyContactTextView"
+        app:layout_constraintEnd_toEndOf="@id/nameEditText"
+        app:layout_constraintStart_toStartOf="@id/guideLine" />
+
+    <EditText
+        android:id="@+id/warningEditText"
         style="@style/Value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="주의사항"
-        app:layout_constraintBaseline_toBaselineOf="@id/warningTextView"
-        app:layout_constraintEnd_toEndOf="@id/nameValueTextView"
-        app:layout_constraintStart_toStartOf="@id/guideLine" />
+        app:layout_constraintEnd_toEndOf="@id/nameEditText"
+        app:layout_constraintStart_toStartOf="@id/guideLine"
+        app:layout_constraintTop_toBottomOf="@id/warningCheckBox" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/goInputActivityButton"
+        android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="36dp"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_edit_24" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/deleteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="36dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toTopOf="@id/goInputActivityButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_delete_24" />
+        app:srcCompat="@drawable/ic_baseline_save_24" />
 
     <androidx.constraintlayout.helper.widget.Layer
-        android:id="@+id/emergencyContactLayer"
+        android:id="@+id/birthdateLayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="imageView,emergencyContactValueTextView"
+        app:constraint_referenced_ids="birthdateValueTextView,birthdateImageView"
         tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
