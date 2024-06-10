@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RecyclerViewStudy</string>
+    <string name="movie">영화 사진</string>
+    <string name="movieTitleText">영화 제목</string>
+</resources>
