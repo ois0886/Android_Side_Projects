@@ -2,7 +2,11 @@ package com.example.recyclerviewstudy
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.Recycler
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.recyclerviewstudy.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
